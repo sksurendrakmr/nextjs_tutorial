@@ -120,3 +120,8 @@ Both layout.tsx and page.tsx files can export metadata. If defined in a layout, 
 Metadata is read in order, from the root level down to the final page level.
 
 When there's metadata in multiple places for the same route, they get combined but page metdata will replace layout metadata if they have the same properties.
+
+Dynamic metadata depends on dynamic information such as the current route parameters,
+external data or metadata in parent segments.
+
+To define dynamic metadata, we export a generateMetadata() that returns a metadata object from a layout or page.tsx file. 
