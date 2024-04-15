@@ -37,4 +37,5 @@ two types:
  Every file that corresponds to a route must be named page.js or page.tsx.
  Each folder corresponds to a path segment in the browser URL.
 
- 
+Notes: Route is associated with file based on the containing folders name within the 
+app folder.
