@@ -39,3 +39,6 @@ two types:
 
 Notes: Route is associated with file based on the containing folders name within the 
 app folder.
+
+By creating a nested folder structure, files will automatically be routed in the same
+way within the URL.
