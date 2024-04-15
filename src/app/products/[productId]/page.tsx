@@ -29,7 +29,9 @@ export const generateMetadata = ({ params }: Props): Metadata => {
 
 const ProductDetails = ({ params }: Props) => {
   return (
-    <div>ProductDetails - {params.productId}</div>
+    <div>
+      <h1>ProductDetails - {params.productId}</h1>
+    </div>
   )
 }
 

@@ -130,3 +130,13 @@ title Metadata
 ---
 The title field's primary purpose is to define the document title.
 It can be either a string or an object.
+
+
+Navigation
+---
+To enable client-side navigation, Nextjs provides us with the Link component
+
+The <Link> component is a React component that extends the HTML `<a>` element, and it's 
+the primary way to navigate between routes in Nextjs
+
+To use it, we need to import it from "next/link"
