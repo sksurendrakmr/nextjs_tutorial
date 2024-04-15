@@ -125,3 +125,8 @@ Dynamic metadata depends on dynamic information such as the current route parame
 external data or metadata in parent segments.
 
 To define dynamic metadata, we export a generateMetadata() that returns a metadata object from a layout or page.tsx file. 
+
+title Metadata
+---
+The title field's primary purpose is to define the document title.
+It can be either a string or an object.
