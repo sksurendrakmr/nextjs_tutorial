@@ -70,3 +70,14 @@ Route group -> we can mark the folder as route group to exclude it to route URL 
 
 By wrapping the folder name within parenthesis, we informing nextjs that auth folder
 will be treated as route group and its name will be omitted from the URL path. 
+
+Layouts
+---
+A page is UI that is unique to a route.
+A layout is UI that is shared between multiple pages in the app.
+
+How to create Layouts
+---
+we can define a layout by default exporting a react component from a layput.js or layout.tsx file.
+That component should accept a children prop that will be populated with a child page 
+during rendering.
