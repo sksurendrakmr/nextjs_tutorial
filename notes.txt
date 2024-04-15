@@ -59,3 +59,14 @@ Use for
 - For avoiding potential naming conflicts with future Next.js file conventions.
 
 If we want to include an underscore in URL segments, we can prefix the folder name "%5F", which is the URL-encoded form of an underscore.
+
+Route Groups
+---
+Allows us to logically group our routes and project files without affecting the URL path structure.
+
+Organize routes and project files into groups based on sections or intent.
+
+Route group -> we can mark the folder as route group to exclude it to route URL path
+
+By wrapping the folder name within parenthesis, we informing nextjs that auth folder
+will be treated as route group and its name will be omitted from the URL path. 
