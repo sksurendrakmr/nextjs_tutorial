@@ -86,4 +86,12 @@ Nested layout
 ----
 Layouts can be nested.
 If we want to create a layout specifically for a route, we can create layout.tsx file 
-withing that folder.                      
+withing that folder.      
+
+Route Group Layout
+---
+
+Route group uses:
+---
+To organize the project in a manner that doesn't affect the URL.
+To selectively apply a layout to certain segments while leaving others unchanged.
