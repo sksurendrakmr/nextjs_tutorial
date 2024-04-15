@@ -140,3 +140,26 @@ The <Link> component is a React component that extends the HTML `<a>` element, a
 the primary way to navigate between routes in Nextjs
 
 To use it, we need to import it from "next/link"
+
+
+Template
+---
+The layouts only mount the part representing the content of the newly loaded page 
+but keep all the common elements untouched.
+Layout doesn't remount shared components resulting in better performance.
+
+In majority of the time, we need this scenario.
+However, we might come across a scenari where we need the layouts to create a new 
+instance for each of their children on navigation.
+
+In such situation, we will use the template file as replacement of the layout file.
+
+Templates are similar to layouts in that they wrap each child layout or page.
+But, with templates, when a user navigates between routes that share a template, a new instance of the component is mounted. DOM elements are recreated, state is not preserved, and effects are re-synchronized
+
+A template can be defined by exporting a default React component from a template.js or template.tsx file.
+
+Similar to layouts, tempaltes also should accept a children prop which will render the nested segments in the route.
+
+It is possible that layout and template co-exist.
+In such scenario, Layout renders first and the layout's children is replaced by the component exported from the template file.
