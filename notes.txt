@@ -81,3 +81,9 @@ How to create Layouts
 we can define a layout by default exporting a react component from a layput.js or layout.tsx file.
 That component should accept a children prop that will be populated with a child page 
 during rendering.
+
+Nested layout
+----
+Layouts can be nested.
+If we want to create a layout specifically for a route, we can create layout.tsx file 
+withing that folder.                      
