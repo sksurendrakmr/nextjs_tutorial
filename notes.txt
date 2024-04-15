@@ -163,3 +163,13 @@ Similar to layouts, tempaltes also should accept a children prop which will rend
 
 It is possible that layout and template co-exist.
 In such scenario, Layout renders first and the layout's children is replaced by the component exported from the template file.
+
+
+Loading UI
+---
+
+loading.tsx 
+--
+This file allows us to create loading states that are displayed to users while a specific route segment's content is loading.
+
+The loading state appears immediately upon navigation, giving users the assurance that the application is responsive and actively loading content.
