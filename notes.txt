@@ -190,3 +190,8 @@ An error.tsx file will handle errors for all its nested child segments.
 The error boundary does not catch errors thrown here because it's nested inside the layout component.
 
 we should keep the error.tsx file in the same directory as layout
+
+
+Parallel Routes 
+---
+Parallel routes are an advanced routing mechanism that allows for the simultaneous rendering of multiple pages within the same layout.
