@@ -29,4 +29,9 @@ export default function ErrorBoundary({
 /**
  * Executing the reset function attempts to re-render the error boundary content.
  * If successful, the fallback error component is replaced with the re-rendered content from page.tsx.
+ * 
+ * Summary
+ * The placement of error.tsx file play a crucial role determining the scope of error handling allowing for more precise control over which parts of the UI are affected when errors occured.
+ * 
+ * Deeper the placement of error.tsx, more granular is error handling.
  */

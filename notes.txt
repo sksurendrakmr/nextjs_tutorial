@@ -173,3 +173,11 @@ loading.tsx
 This file allows us to create loading states that are displayed to users while a specific route segment's content is loading.
 
 The loading state appears immediately upon navigation, giving users the assurance that the application is responsive and actively loading content.
+
+
+Handling Errors in Nested routes
+---
+Errors bubble up to the closest parent error boundary.
+This implies that an error.tsx file will cater to errors for all its nested child segments.
+
+By positioning error.tsx files at different levels in the nested folders of a route, we can achieve a more granular level of error handling.
