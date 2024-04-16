@@ -2,14 +2,17 @@ export default function DashboardLayout({
     children,
     users,
     revenue,
-    notifications
+    notifications,
+    login
 }: {
     children: React.ReactNode;
     users: React.ReactNode;
     notifications: React.ReactNode;
     revenue: React.ReactNode;
+    login: React.ReactNode;
 }) {
-    return <>
+    const isLoggedIn = true;
+    return isLoggedIn ? <>
         <div>{children}</div>
         <div style={{ display: "flex" }}>
             <div style={{ display: "flex", flexDirection: "column" }}>
@@ -19,7 +22,7 @@ export default function DashboardLayout({
         </div>
         <div style={{ display: "flex", flex: 1 }}>{notifications}</div>
         <h2>Product details Layout</h2>
-    </>;
+    </> : (login)
 }
 
 /**
@@ -36,4 +39,9 @@ export default function DashboardLayout({
  * Each slot of the dashboard can essentially function as a mini-application, complete with its own navigation and state management.
  * 
  * This is especially useful in a complex application such as our dashboard where different sections serve distinct purposes.
+ */
+
+
+/**
+ * Parallel routes allow us to conditionally render pages based on certain conditions keeping our code well seperated in the same URL.
  */
