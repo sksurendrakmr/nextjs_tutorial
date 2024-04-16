@@ -195,3 +195,11 @@ we should keep the error.tsx file in the same directory as layout
 Parallel Routes 
 ---
 Parallel routes are an advanced routing mechanism that allows for the simultaneous rendering of multiple pages within the same layout.
+
+
+Intercepting Routes 
+---
+Intercepting routes allow us to intercept or stop the default routing behaviour to present an alternate view or component when navigating through the UI, while still preserving the indended route for scenarios like page reloads.
+
+This can be usefule if we want to show a route while keeping the context of the current page.
+
