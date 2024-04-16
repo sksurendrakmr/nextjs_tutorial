@@ -181,3 +181,12 @@ Errors bubble up to the closest parent error boundary.
 This implies that an error.tsx file will cater to errors for all its nested child segments.
 
 By positioning error.tsx files at different levels in the nested folders of a route, we can achieve a more granular level of error handling.
+
+
+Handling errors in Layouts
+---
+An error.tsx file will handle errors for all its nested child segments.
+
+The error boundary does not catch errors thrown here because it's nested inside the layout component.
+
+we should keep the error.tsx file in the same directory as layout
