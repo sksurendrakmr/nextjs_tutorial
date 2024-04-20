@@ -230,3 +230,7 @@ http://localhost:8080/comments/:id
 
 We will see how to create a dynamic API route which will return a single comment 
 based on the ID.
+
+Handling PATCH request 
+--
+Partial modification to a resource.
