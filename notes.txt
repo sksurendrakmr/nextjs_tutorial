@@ -277,3 +277,19 @@ Cookies are mainly used for three purposes
   - using the request object with the GET method
   - employing dynamic functions like headers() and cookies()
   - using any HTTP method other than GET
+
+
+Middleware
+---
+Middleware in Next.js is a powerful feature that offers a robust way to intercept and control the flow of requests and responses within your applications.
+
+It does this at a global level significantly enchancing features like redirection, URL rewrites, authentication, headers and cookies management, and more.
+
+Middleware allows us to specify paths where it will be active.
+
+There are two approches
+- custom matcher config
+- conditional statement
+
+steps to create a middleware:
+1. create either middleware.ts or js inside src folder.
