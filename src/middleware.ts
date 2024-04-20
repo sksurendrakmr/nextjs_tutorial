@@ -1,11 +1,13 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
-  //Requirement is redirect the user to homepage if /profile is accessed
-  return NextResponse.redirect(new URL("/", request.url));
+  //Requirement is redirect the user to homepage if /hello is accessed
+  if (request.nextUrl.pathname === "/profile") {
+    return NextResponse.redirect(new URL("/hello", request.url));
+  }
 }
 
-//The config object specify a matcher to which this middleware apply to.
-export const config = {
-  matcher: "/profile",
-};
+/**
+ * Apart from handling redirections, middleware also allows URL rewrites which is
+ * useful tool for legacy URL support or SEO optimization.
+ */
