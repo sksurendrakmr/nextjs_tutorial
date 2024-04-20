@@ -219,3 +219,7 @@ Route handlers run server-side, ensuring that sensitive information like private
 Route handlers are the equivalent of API routes in page router.
 
 Like the page routes, route handlers should also be placed inside app folder.
+
+
+Handling GET Request 
+----
