@@ -221,5 +221,12 @@ Route handlers are the equivalent of API routes in page router.
 Like the page routes, route handlers should also be placed inside app folder.
 
 
-Handling GET Request 
-----
+Dynamic Route Handlers 
+---
+To handle patch and delete request, it's little bit tricky as we need some kind of identifier such as id in the path to do the operation.
+
+This id will be dynamic segment.
+http://localhost:8080/comments/:id
+
+We will see how to create a dynamic API route which will return a single comment 
+based on the ID.
