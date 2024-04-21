@@ -300,3 +300,21 @@ Rendering
 Rendering is the process that transforms the code we write into user interfaces.
 In Next.js, choosing the right time and place to do this rendering is vital for building a performant application.
 
+Client-side Rendering
+---
+
+This method of rendering, where the component code is transformed into a user interface directly within the browser (the client), is known as client-side rendering (CSR)
+
+CSR quickly became the standard for SPAs, with widespread adoption.
+
+It wasn't long before developers began noticing some inherent drawbacks to this approach.
+
+Drawbacks of CSR 
+---
+Generating HTML that mainly contains a single div tag is not optimal for SEO, as it provides little content for search engines to index.
+
+Performance 
+--
+Having the browser (the client) handle all the work, such as fetching data, computing the UI, and making the HTML interactive, can slow things down. Users might see a blank screen or a loading spinner while the page loads.
+
+Each new feature added to the application increases the size of the javascrip bundle, prolonging the wait time for users to see the UI.
