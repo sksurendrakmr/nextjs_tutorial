@@ -318,3 +318,64 @@ Performance
 Having the browser (the client) handle all the work, such as fetching data, computing the UI, and making the HTML interactive, can slow things down. Users might see a blank screen or a loading spinner while the page loads.
 
 Each new feature added to the application increases the size of the javascrip bundle, prolonging the wait time for users to see the UI.
+
+
+Server-side rendering (SSR)
+---
+Recollecting Drawbacks of CSR 
+--
+
+1. Reliance on javascript for rendering content on the client side can significatly hurt SEO, as search engines might struggle to index the content properly.
+
+2. The user experience can suffer from slow load times, as the brower has to download, parse, and execute javascript before the user sees any meaningful content on the page.
+
+
+With SSR, the interactivity of the page is on hold until the javascript bundle comprising react itself along with the application specific code has been completly downlaoded and executed by the browser. This phase is known as hyderation where the specific HTML page initially served by server is brought to life.
+
+During hydration, React takes control in the browser, reconstructing the component tree in memory, based on the static HTML that was served.
+
+It carefully plans the placement of interactive elements within this tree. Then, React proceeds to bind the necessary javascript logic to these elements.
+
+This involves initializing the application state, attaching event handlers for actions such as clicks and mouseovers, and setting up any other dynamic functionalities required for a fully interactive user experience. 
+
+
+Server-side solutions is categorized into two categories :
+1. Static site Generation (SSG)
+2. Server-side Rendering (SSR)
+
+SSG occurs at build time, when the application is deployed on the server. This results in pages that are already rendered and ready to serve. It is ideal for content that doesn't change often, like blog posts.
+
+SSR, on the other hand, renders pages on-demand in response to user requests. It is suitable for personalized content like social media feeds, where the HTML depends on the logged-in user.
+
+
+SSR ensure faster page load and better SEOs
+
+Challenges
+---
+1. we have to fetch everything before we can show anything
+--
+Components cannot start rendering and then pause or "wait" while data is still being loaded.
+
+If a component needs to fetch data from a database or another source (like an API), this fetching must be completed before the server can begin rendering the page.
+
+This can delay the server's response time to the browser, as the server must finish collecting all necessary data before any part of the page can be sent to the client.
+
+
+2. we have to load everything before we can hydrate anything 
+--
+For successful hydration, where React adds interactivity to the server-rendered HTML, the component tree in the browser must exactly match the server-generated component tree.
+
+This means that all the javascript for the components must be loaded on the client before we can start hydrating any of them.
+
+3. we have to hydrate everything beofre we can interact with anything 
+--
+React hydrates the component tree in a single pass, meaning once it starts hydrating, it won't stop until it's finished with the entire tree.
+As a consequence, all components must be hudrated before we can interact with any of them.
+
+
+These three problems of
+1. having to load the data for the entire page 
+2. load the js for the entire page and 
+3. hydrate the entire page 
+
+create an "all or nothing" waterfall problem that spans from the server to the client, where each issue must be resolved beofre moving to the next one.
